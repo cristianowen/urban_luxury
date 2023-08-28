@@ -3,13 +3,15 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 
-function BasicExample() {
+function CardSolucionn() {
   return (
     <div  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-    <Card  style={{ width: '18rem'}}>
+
+    
+    <Card style={{ width: '18rem'}}>
 
       <Card.Body>
-        <Card.Title>Causas del calentamiento global</Card.Title>
+        <Card.Title>Posibles soluciones del calentamiento global</Card.Title>
         <Card.Text>
           En este articulo podrás informarte de distintas causas del calentamiento global
         </Card.Text>
@@ -17,8 +19,7 @@ function BasicExample() {
       </Card.Body>
     </Card>
     </div>
-
   );
 }
 
-export default BasicExample;
+export default CardSolucionn;
