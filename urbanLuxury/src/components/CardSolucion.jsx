@@ -5,10 +5,8 @@ import { Link } from 'react-router-dom';
 
 function CardSolucionn() {
   return (
-    <div  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-
-    
-    <Card style={{ width: '18rem'}}>
+    <>
+    <Card style={{ width: '100%'}}>
 
       <Card.Body>
         <Card.Title>Posibles soluciones del calentamiento global</Card.Title>
@@ -18,7 +16,7 @@ function CardSolucionn() {
         <Button variant="primary"><Link to={'/causas'} className = 'link'>Empezar</Link></Button>
       </Card.Body>
     </Card>
-    </div>
+    </>
   );
 }
 
