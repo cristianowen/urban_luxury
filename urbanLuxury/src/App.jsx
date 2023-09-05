@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <div>
+        <h1>URBAN LUXURY</h1>
         <div className="tercio"style={{marginLeft: '2%'}}>
           <BasicExample />
         </div>
