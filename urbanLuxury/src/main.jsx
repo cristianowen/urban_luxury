@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { createBrowserHistory } from '@remix-run/router'
 import Causas from './components/Causas.jsx'
 import Soluciones from './components/Soluciones.jsx'
+import Donaciones from './components/Donaciones.jsx'
 
 const routes = createBrowserRouter([{
   path: '/',
@@ -17,7 +18,11 @@ const routes = createBrowserRouter([{
   element: <Causas/>
 },
 {  path: '/Soluciones',
-  element: <Soluciones/>}
+  element: <Soluciones/>},
+  {
+    path: '/Donaciones',
+    element: <Donaciones/>
+  }
 ])
 
 

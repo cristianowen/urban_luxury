@@ -3,21 +3,21 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 
-function CardSolucionn() {
+function CardDonaciones() {
   return (
     <>
        <Card style={{ width: '100%' }}>
       <Card.Img variant="top" src=""/>
       <Card.Body>
-        <Card.Title>Soluciones del calentamiento global</Card.Title>
+        <Card.Title>Donaciones</Card.Title>
         <Card.Text>
-          Posibles soluciones del cambio climatico que podrías implementar vos mismo
+        Tu generosidad hace la diferencia. Ayúdanos con tu donación hoy.
         </Card.Text>
-        <Button variant="primary"><Link to={'/Soluciones'} className = 'link'>Empezar</Link></Button>
+        <Button variant="primary"><Link to={'/Donaciones'} className = 'link'>Empezar</Link></Button>
       </Card.Body>
     </Card> 
     </>
   );
 }
 
-export default CardSolucionn;
+export default CardDonaciones;

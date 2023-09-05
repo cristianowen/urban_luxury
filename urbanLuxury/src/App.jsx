@@ -3,7 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardSolucionn from './components/CardSolucion';
 import Figure from 'react-bootstrap/Figure';
-
+import CardDonaciones from './components/CardDonaciones';
 
 function App() {
 
@@ -32,7 +32,7 @@ function App() {
           <CardSolucionn />
         </div>
         <div className="tercio" style={{ marginRight: '2%' }}>
-          <CardSolucionn />
+          <CardDonaciones />
         </div>
       </div>
     </>
