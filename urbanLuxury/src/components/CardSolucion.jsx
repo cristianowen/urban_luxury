@@ -13,7 +13,7 @@ function CardSolucionn() {
         <Card.Text>
           Posibles soluciones del cambio climatico
         </Card.Text>
-        <Button variant="primary"><Link to={'/causas'} className = 'link'>Empezar</Link></Button>
+        <Button variant="primary"><Link to={'/Soluciones'} className = 'link'>Empezar</Link></Button>
       </Card.Body>
     </Card> 
     </>
