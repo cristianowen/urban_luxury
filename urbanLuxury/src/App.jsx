@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardSolucionn from './components/CardSolucion';
 import Figure from 'react-bootstrap/Figure';
 import CardDonaciones from './components/CardDonaciones';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 

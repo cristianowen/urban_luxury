@@ -14,6 +14,26 @@
     margin-left: 10px;
     width: 250px;
     height: 40px;
+    margin-top: 10px;
+  }
+  #formm{
+    background-color: white;
+    width: 300px;
+    
+   
+  }
+  #err{
+    margin-top: 10px;
+    width: 300px;
+    
     
   }
+  #box{
+    padding: 190px;
+    margin-left: 30%;
+    
+    }
+    #boton{
+      margin-left: 50px;
+    }
  
