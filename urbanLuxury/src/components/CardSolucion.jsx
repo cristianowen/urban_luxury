@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 function CardSolucionn() {
   return (
     <>
-       <Card style={{ width: '100%' }}>
+       <Card style={{ width: "100%" }}>
       <Card.Img variant="top" src=""/>
       <Card.Body>
         <Card.Title>Soluciones del calentamiento global</Card.Title>
         <Card.Text>
-          Posibles soluciones del cambio climatico que podrías implementar vos mismo
+          Posibles soluciones del cambio climatico.
         </Card.Text>
         <Button variant="primary"><Link to={'/Soluciones'} className = 'link'>Empezar</Link></Button>
       </Card.Body>

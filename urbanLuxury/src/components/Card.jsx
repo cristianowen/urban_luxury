@@ -11,7 +11,7 @@ function BasicExample() {
       <Card.Body>
         <Card.Title>Causas del calentamiento global</Card.Title>
         <Card.Text>
-          informate sobre las principales causas del calentamiento global
+          Informate sobre las principales causas del calentamiento global
         </Card.Text>
         <Button variant="primary"><Link to={'/causas'} className = 'link'>Empezar</Link></Button>
       </Card.Body>

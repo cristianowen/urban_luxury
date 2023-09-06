@@ -1,0 +1,27 @@
+.accordion-column {
+    text-align: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+  }
+  
+  .accordion-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .accordion-icon {
+    margin-right: 10px; /* Espacio entre la imagen y el texto del título */
+    width: 30px; /* Ancho de la imagen */
+    height: 30px; /* Altura de la imagen */
+  }
+
+ 
+    #lista {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        margin-left: 45vh;
+      }
+      
+    
+  

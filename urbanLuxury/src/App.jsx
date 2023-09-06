@@ -11,7 +11,7 @@ function App() {
     <>
       <div>
         <div className='title'>
-          <h1>URBAN LUXURY</h1>
+          <h1 >URBAN LUXURY</h1>
           <h4>Informate y ayudá a concientizar a otros</h4>
           <div>
             <Figure className="figure-container">

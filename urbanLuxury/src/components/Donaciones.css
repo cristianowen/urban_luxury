@@ -1,0 +1,19 @@
+/* En tu archivo de estilos CSS */
+.custom-button {
+    background-color: #007bff; /* Cambia el color de fondo */
+    color: #fff; /* Cambia el color del texto */
+    border: none; /* Elimina el borde */
+    margin-top: 12px;
+    margin-left: 40px;
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+  }
+  #holder{
+    margin-left: 10px;
+    width: 250px;
+    height: 40px;
+    
+  }
+ 
