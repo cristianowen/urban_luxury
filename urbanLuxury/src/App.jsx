@@ -1,5 +1,6 @@
-import BasicExample from './components/Card'
-import './App.css'
+import React from 'react';
+import BasicExample from './components/Card';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardSolucionn from './components/CardSolucion';
 import Figure from 'react-bootstrap/Figure';
@@ -7,13 +8,12 @@ import CardDonaciones from './components/CardDonaciones';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-
   return (
     <>
       <div>
         <div className='title'>
-          <h1 >URBAN LUXURY</h1>
-          <h4>Informate y ayudá a concientizar a otros</h4>
+          <h1 className="main-title">URBAN LUXURY</h1>
+          <h4 className="subtitle">Informate y ayuda a concientizar a otros</h4>
           <div>
             <Figure className="figure-container">
               <Figure.Image
@@ -24,7 +24,6 @@ function App() {
               />
             </Figure>
           </div>
-
         </div>
         <div className="tercio" style={{ marginLeft: '2%' }}>
           <BasicExample />
@@ -37,7 +36,7 @@ function App() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

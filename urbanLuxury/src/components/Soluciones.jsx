@@ -1,19 +1,52 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'react-bootstrap/Image';
 import Carousel from 'react-bootstrap/Carousel';
 import Accordion from 'react-bootstrap/Accordion';
 import './Soluciones.css'
+
+
 function Soluciones() {
+  
+
+
   return (
-    <div>
-      <header>
+    <div className='conteiner'>
+       <style>
+        {`
+          /* Agrega el enlace a la fuente 'Noto Sans' */
+          @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+          /* Aplica la fuente 'Noto Sans' al texto */
+          body {
+            font-family: 'Noto Sans', sans-serif;
+          }
+
+          /* Define estilos para el título */
+          .main-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333; /* Color de texto personalizado */
+            margin-bottom: 20px;
+          }
+
+          /* Define estilos para el texto informativo */
+          .info-text {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666; /* Color de texto personalizado */
+          }
+        `}
+      </style>
+     
         <div className='title'>
         <h1>Iniciativas para combatir el cambio climatico</h1>
         </div>
-      </header>
+     
       
-      <div>
-        <p>Los gobiernos, las empresas y los miembros de la sociedad civil suman sus fuerzas en iniciativas climáticas para acelerar el ritmo de la acción por el clima. Las iniciativas, que se iniciaron en la Cumbre sobre la Acción Climática de 2019 que se celebró en la sede de las Naciones Unidas, en Nueva York, están reduciendo las emisiones, abordando aspectos fundamentales, como el empleo y la igualdad de género, desbloqueando la financiación, construyendo infraestructuras sostenibles, utilizando soluciones basadas en la naturaleza y avanzando en la adaptación y la resiliencia climática. El papel de las Naciones Unidas como convocante es más necesario que nunca para animar a la gente a colaborar, ser ambiciosa y tomar las medidas necesarias para limitar el aumento de la temperatura global a no más de 1,5 grados centígrados. Las Naciones Unidas también apoyan la transición hacia una economía sostenible y baja en emisiones de carbono, que sea justa y beneficiosa para todos.</p>
+        <div className='content'>
+        <p className='info-text'>
+          Los gobiernos, las empresas y los miembros de la sociedad civil se están uniendo en una serie de iniciativas climáticas para acelerar la acción contra el cambio climático. Estas iniciativas, que comenzaron en la Cumbre sobre la Acción Climática de 2019 en la sede de las Naciones Unidas en Nueva York, están desempeñando un papel crucial en la reducción de las emisiones, abordando cuestiones fundamentales como el empleo y la igualdad de género, desbloqueando la financiación necesaria, construyendo infraestructuras sostenibles y promoviendo soluciones basadas en la naturaleza. La participación de las Naciones Unidas como convocante es esencial para motivar a las personas a colaborar, establecer objetivos ambiciosos y tomar las medidas necesarias para limitar el aumento de la temperatura global a no más de 1,5 grados centígrados. Las Naciones Unidas también respaldan la transición hacia una economía sostenible y con bajas emisiones de carbono que sea justa y beneficiosa para todos.
+        </p>
       </div>
       <aside className='accordion-column' id='lista'>
   <Accordion defaultActiveKey="0" flush>
@@ -105,6 +138,10 @@ function Soluciones() {
 
     </div>
   )
-}
+
+};
+
 
 export default Soluciones;
+
+

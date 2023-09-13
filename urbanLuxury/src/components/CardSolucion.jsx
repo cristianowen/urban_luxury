@@ -1,23 +1,32 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import './BasicExample.css'; // Agrega un archivo CSS para estilos personalizados
 
-
-function CardSolucionn() {
+function CardSolucion() {
   return (
     <>
-       <Card style={{ width: "100%" }}>
-      <Card.Img variant="top" src=""/>
+        
+
+    <Card className="custom-card" id="caa">
+      <div className="card-image">
+        <Card.Img variant="top"  src="https://static.vecteezy.com/system/resources/previews/008/415/021/non_2x/global-warming-cartoon-style-illustration-with-planet-earth-in-a-melting-or-burning-state-and-image-sun-to-prevent-damage-to-nature-and-climate-change-vector.jpg" />
+       
+      </div>
       <Card.Body>
-        <Card.Title>Soluciones del calentamiento global</Card.Title>
-        <Card.Text>
-          Posibles soluciones del cambio climatico.
+        <Card.Title className="card-title">Soluciones del calentamiento global</Card.Title>
+        <Card.Text className="card-text">
+        Posibles soluciones del cambio climatico.
         </Card.Text>
-        <Button variant="primary"><Link to={'/Soluciones'} className = 'link'>Empezar</Link></Button>
+        <Link to={'/Soluciones'} className="custom-link">
+          <button className="custom-button">Empezar</button>
+        </Link>
       </Card.Body>
-    </Card> 
+    </Card>
     </>
   );
 }
 
-export default CardSolucionn;
+export default CardSolucion;
+
+
