@@ -6,10 +6,16 @@ import CardSolucionn from './components/CardSolucion';
 import Figure from 'react-bootstrap/Figure';
 import CardDonaciones from './components/CardDonaciones';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Layout from './components/Layout';
+import Causas from './components/Causas';
+import Soluciones from './components/Soluciones';
+import Donaciones from './components/Donaciones';
 
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
 function App() {
   return (
     <>
+
       <div>
         <div className='title'>
           <h1 className="main-title">URBAN LUXURY</h1>

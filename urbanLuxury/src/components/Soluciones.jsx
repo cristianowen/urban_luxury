@@ -6,8 +6,6 @@ import './Soluciones.css'
 
 
 function Soluciones() {
-  
-
 
   return (
     <div className='conteiner'>
