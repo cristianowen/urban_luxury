@@ -1,18 +1,21 @@
 import React, { useContext } from 'react';
 import { UsuarioContext } from '../components/context/UserContext';
 import { Link } from 'react-router-dom';
+import './Login.css'; // Importa el archivo de estilos
 
 function Welcome() {
   const { usuario } = useContext(UsuarioContext);
-    
 
   return (
-    <div>
+    <div className="hypnotic-background"> {/* Aplica la clase de fondo hipnotizante */}
+      <div id='caja'>
       <h2>Bienvenido, {usuario}.</h2>
-      {/* Otro contenido de bienvenida */}
+      <br />
+            {/* Otro contenido de bienvenida */}
       <Link to={'/app'} className="custom-link">
-          <button type="submit">Ir a app</button>
-        </Link>
+        <button className="custom-button">Ir a app</button>
+      </Link>
+    </div>
     </div>
   );
 }
