@@ -7,7 +7,9 @@ import Figure from 'react-bootstrap/Figure';
 import CardDonaciones from './components/CardDonaciones';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function App() {
+  
   return (
     <>
       <div>

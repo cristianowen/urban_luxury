@@ -2,32 +2,30 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { createBrowserHistory } from '@remix-run/router'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Causas from './components/Causas.jsx'
 import Soluciones from './components/Soluciones.jsx'
 import Donaciones from './components/Donaciones.jsx'
-
-const routes = createBrowserRouter([{
-  path: '/',
-  element: <App/>
-},{
-  path: '/Causas',
-  element: <Causas/>
-},
-{  path: '/Soluciones',
-  element: <Soluciones/>},
-  {
-    path: '/Donaciones',
-    element: <Donaciones/>
-  }
-])
+import Login from './components/Login.jsx'
+import UsuarioProvider from './components/context/UserContext';
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
- <StrictMode>
-  <RouterProvider router = {routes}/>
- </StrictMode>
-)
+const  root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+
+  <>
+  <React.StrictMode>
+  <BrowserRouter>
+  <UsuarioProvider>
+       <Routes>
+       <Route path="/" element={<Login />}></Route>
+       <Route path="/app" element={<App />}></Route>
+       <Route path="/Causas" element={<Causas />}></Route>
+	     <Route path="/Soluciones" element={<Soluciones/>}></Route>
+       <Route path="/Donaciones" element={<Donaciones />}></Route>
+       </Routes>
+       </UsuarioProvider>
+     </BrowserRouter>
+  </React.StrictMode>
+</>
+  )
