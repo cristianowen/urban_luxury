@@ -3,9 +3,12 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import './BasicExample.css'; // Agrega un archivo CSS para estilos personalizados
 
+
 function BasicExample() {
   return (
-    <Card className="custom-card" id="caa">
+    <>
+             
+        <Card className="custom-card" id="caa">
       <div className="card-image">
         <Card.Img variant="top" src="https://img.freepik.com/vector-gratis/ilustracion-contaminaciones-tierra_1308-39766.jpg" alt="Imagen relacionada al calentamiento global" />
       </div>
@@ -19,6 +22,9 @@ function BasicExample() {
         </Link>
       </Card.Body>
     </Card>
+    </>
+
+    
   );
 }
 

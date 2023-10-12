@@ -1,18 +1,46 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'react-bootstrap/Image';
 import Carousel from 'react-bootstrap/Carousel';
 import Accordion from 'react-bootstrap/Accordion';
+import './Soluciones.css'
 
 function Causas() {
   return (
-    <div>
+    <div className='conteiner'>
+       <style>
+        {`
+          /* Agrega el enlace a la fuente 'Noto Sans' */
+          @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+          /* Aplica la fuente 'Noto Sans' al texto */
+          body {
+            font-family: 'Noto Sans', sans-serif;
+          }
+
+          /* Define estilos para el título */
+          .main-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333; /* Color de texto personalizado */
+            margin-bottom: 20px;
+          }
+
+          /* Define estilos para el texto informativo */
+          .info-text {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666; /* Color de texto personalizado */
+          }
+        `}
+      </style>
       <header>
         <div className='title'>
               <h1>Causas del calentamiento global</h1>
         </div>
       </header>
-      <div>
-        <p>Primero hablemos de qué es el calentamiento global, El calentamiento global es un fenómeno en el que 
+      
+      <div className='content'>
+      <p className='info-text'>Primero hablemos de qué es el calentamiento global, El calentamiento global es un fenómeno en el que 
           la temperatura promedio de la Tierra está subiendo gradualmente. Esto ocurre debido a la acumulación de 
           gases como el dióxido de carbono en la atmósfera, principalmente por actividades humanas como la quema 
           de combustibles fósiles y la deforestación. Este aumento de temperatura tiene efectos en el clima, como más sequías, 

@@ -7,11 +7,12 @@ import Figure from 'react-bootstrap/Figure';
 import CardDonaciones from './components/CardDonaciones';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
 function App() {
   
   return (
     <>
+
       <div>
         <div className='title'>
           <h1 className="main-title">URBAN LUXURY</h1>
