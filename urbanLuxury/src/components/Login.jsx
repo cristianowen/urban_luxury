@@ -1,16 +1,22 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UsuarioContext } from '../components/context/UserContext';
+
 
 function Login() {
   const { usuario, setUsuario } = useContext(UsuarioContext);
   const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
-    username: '',
-    password: '',
+  // Inicializa el estado del formulario con los datos del localStorage
+  const [formData, setFormData] = useState(() => {
+    const storedUsername = localStorage.getItem('username');
+    return {
+      username: storedUsername || '',
+      password: '',
+    };
   });
 
+  // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.username && formData.password) {
@@ -22,17 +28,19 @@ function Login() {
           username: formData.username,
           // Otros datos del usuario si es necesario
         });
+        // Guarda el nombre de usuario en el localStorage
+        localStorage.setItem('username', JSON.stringify(formData.username));
         console.log('Usuario actualizado:', formData.username);
         
-        // Redirige al usuario a la página de bienvenida utilizando navigate
         navigate('/welcome');
       
-        
-      }
-   
-      
     }
-  
+  }
+
+  // Función para manejar cambios en el campo de nombre de usuario
+  const handleUsernameChange = (e) => {
+    setFormData({ ...formData, username: e.target.value });
+  }
 
   return (
     <div>
@@ -45,7 +53,7 @@ function Login() {
             id="username"
             name="username"
             value={formData.username}
-            onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+            onChange={handleUsernameChange}
           />
         </div>
         <div>
@@ -58,7 +66,11 @@ function Login() {
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           />
         </div>
-        <button type="submit">Iniciar Sesión</button>
+        
+        <Link to={'/Welcome'} className="custom-link">
+          <button className="custom-button">Empezar</button>
+        </Link>
+    
       </form>
     </div>
   );
