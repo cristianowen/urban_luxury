@@ -1,29 +1,38 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { UsuarioContext } from '../components/context/UserContext';
 
 function Login() {
-  const { usuario, setUsuario } = React.useContext(UsuarioContext);
+  const { usuario, setUsuario } = useContext(UsuarioContext);
+  const navigate = useNavigate();
 
-  const [formData, setFormData] = React.useState({
+  const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Verifica si los datos ingresados coinciden con el nombre y la contraseña predeterminados
-    if (formData.username === 'juan' && formData.password === '1') {
-      // Actualiza el estado del usuario
-      setUsuario({
-        username: formData.username,
-        // Otros datos del usuario si es necesario
-      });
-      alert('Inicio de sesión exitoso');
-    } else {
-      alert('Credenciales incorrectas');
+    if (formData.username && formData.password) {
+      // Verifica si los datos ingresados coinciden con el nombre y la contraseña predeterminados
+      
+        // Actualiza el estado del usuario con el nombre de usuario ingresado
+        setUsuario({
+          ...usuario,
+          username: formData.username,
+          // Otros datos del usuario si es necesario
+        });
+        console.log('Usuario actualizado:', formData.username);
+        
+        // Redirige al usuario a la página de bienvenida utilizando navigate
+        navigate('/welcome');
+      
+        
+      }
+   
+      
     }
-  };
+  
 
   return (
     <div>
@@ -49,10 +58,7 @@ function Login() {
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           />
         </div>
-
-        <Link to={'/app'} className="custom-link">
-          <button type="submit">Iniciar Sesión</button>
-        </Link>
+        <button type="submit">Iniciar Sesión</button>
       </form>
     </div>
   );
